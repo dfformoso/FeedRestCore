@@ -34,7 +34,7 @@ function tokenManager($localStorage){
 function apiAccess($resource, tokenManager) {
     var self = this;
 
-    self.baseUrl = 'http://127.0.0.1:8088';
+    self.baseUrl = 'https://dry-woodland-13910.herokuapp.com';
 
      self.category = $resource(self.baseUrl+'/categories/:id'
         ,{ id : '@id' }
