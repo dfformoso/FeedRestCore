@@ -1,0 +1,31 @@
+<div >
+	<div class="panel panel-primary" ng-repeat='entry in feed.entries'>
+		<div class="panel-heading">
+			<a data-toggle="modal" ng-href="{{entry.url}}" data-target="#myModal" ng-click="feed.openEntry(entry,$event)">{{entry.title}}</a>
+		</div>
+		<div class="panel-body">
+			<span>{{entry.summary}}</span>
+		</div>
+		<div class="panel-footer">
+			<a id="entryUrl" ng-href='{{entry.feedURL}}'>{{entry.feedTitle}}</a>
+		</div>
+
+		
+		<div id="myModal" class="modal fade" role="dialog">
+  			<div class="modal-dialog modal-lg">
+    		<!-- Modal content-->
+    			<div class="modal-content">
+      				<div class="modal-header">
+      					<button type="button" class="close" data-dismiss="modal">×</button>
+      					<h4><a ng-href="{{entry.url}}">{{entry.title}}</a></h4>
+					</div>
+					<div ng-bind-html="feed.entry" class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+					</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
