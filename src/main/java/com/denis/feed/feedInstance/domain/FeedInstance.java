@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by denis on 27/09/15
  */
 @Entity
-@Table(name = "com/denis/feed/feedInstance")
+@Table(name = "feedInstance")
 public class FeedInstance {
 
 

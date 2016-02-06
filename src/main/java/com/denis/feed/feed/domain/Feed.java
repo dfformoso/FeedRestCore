@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by denis on 10/09/15
  */
 @Entity
-@Table(name = "com/denis/feed/feed")
+@Table(name = "feed")
 public class Feed {
 
     @Id
