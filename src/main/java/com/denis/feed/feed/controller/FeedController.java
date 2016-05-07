@@ -6,6 +6,7 @@ import com.denis.feed.entry.domain.EntryWrapper;
 import com.denis.feed.entryInstance.service.EntryInstanceService;
 import com.denis.feed.feed.domain.FeedWrapper;
 import com.denis.feed.feedInstance.service.FeedInstanceService;
+import com.denis.feed.validation.InjectSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.denis.feed.validation.InjectSession;
 
 import java.util.List;
 

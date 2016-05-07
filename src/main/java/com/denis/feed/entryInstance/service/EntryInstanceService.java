@@ -41,11 +41,9 @@ public class EntryInstanceService {
     @Autowired
     EntryService entryService;
 
-    public void updateEntryInstance(Long idEntry, Long idFeed, Long idUser, boolean read) {
+    public void updateEntryInstance(Long idEntry,Long idUser, boolean read) {
         log.info("updateEntryInstance idUser [" + idUser + "] idEntryInstance [" + idEntry + "] read [" + read + "]");
-
-        FeedInstance feedInstance = feedInstanceRepository.getByIdUserAndIdFeed(idUser, idFeed);
-        EntryInstance ei = entryInstanceRepository.getByIdEntryAndIdFeedInstance(idEntry, feedInstance.getIdFeed());
+        EntryInstance ei = entryInstanceRepository.getBydIdEntryAndUser(idEntry,idUser);
         ei.setProcessed(read);
         if (read) {
             ei.setDateProcess(new Date());

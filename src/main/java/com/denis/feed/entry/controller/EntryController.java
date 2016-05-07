@@ -41,4 +41,11 @@ public class EntryController {
     public List<EntryWrapper> getNewEntries(@InjectSession Session session) {
         return entryInstanceService.getNewEntries(session.getUser().getIdUser());
     }
+
+    @RequestMapping(value = "/{idEntry}/read", method = RequestMethod.POST)
+    public void setEntryRead(@PathVariable Long idEntry, @InjectSession Session session) {
+        entryInstanceService.updateEntryInstance(idEntry, session.getUser().getIdUser(), true);
+    }
+
+
 }
