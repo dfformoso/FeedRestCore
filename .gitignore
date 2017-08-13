@@ -1,3 +1,7 @@
 target
 .DS_Store
 Procfile
+/feedRest.iml
+/target/
+.idea/
+feedRest.iml
